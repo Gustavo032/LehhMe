@@ -1,5 +1,6 @@
 .movie-card {
   position: relative;
+  justify-self: center;
 
   img {
     width: 14.31rem;
@@ -7,6 +8,9 @@
   }
 
   > div {
+    width: 14.31rem;
+    height: 21.25rem;
+	
     position: absolute;
     top: 0;
     bottom: 0;
