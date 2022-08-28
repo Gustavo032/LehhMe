@@ -28,7 +28,7 @@ export function SideBar() {
   return(
 
 		<nav className="sidebar">
-			<span>Read<p>Me</p></span>
+			<span>Lehh<p>Me</p></span>
 
 			<div className="buttons-container">
 				{genres.map(genre => (
