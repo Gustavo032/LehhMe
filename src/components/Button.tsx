@@ -12,7 +12,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 function ButtonComponent({ iconName, title, selected, ...rest }: ButtonProps) {
   return (
     <button type="button" {...(selected && { className: 'selected' })} {...rest}>
-      <Icon name={iconName} color={selected ? '#FAE800' : '#FBFBFB'} />
+      <Icon name={iconName} color={selected ? '#805AD5' : '#FBFBFB'} />
       {title}
     </button>
   );

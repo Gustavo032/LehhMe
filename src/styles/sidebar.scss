@@ -4,6 +4,7 @@ nav.sidebar {
 	bottom: 0;
 	left: 0;
 	right: 0;
+	z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -15,27 +16,73 @@ nav.sidebar {
   padding: 2rem;
 
   background: var(--background2);
+ &.disabled{
+	width: 0px;
+	background-color: #00000000;
+	
+	.openSideBarButton{
+		position: fixed;
+		top: 2rem;
+		left: 2rem;    
+		width: 3rem;
+		height: 3rem;
+		border-radius: 0.40rem;
+		border: solid 0.06rem #fff;
+		text-align: center;
+		transition: filter 1s;
+		
+		&:hover{
+			filter: drop-shadow(1rem 0.16rem 0.06rem #B794F4);
+			cursor: pointer;
+			opacity: 0.8;
+		}
 
-  > span {
-    margin-bottom: 4.5rem;
-    font-size: 3rem;
-    font-weight: 600;
-    color: var(--yellow);
-	position: fixed;
-	top: 0;
-	left: auto;
-	right: auto;
+		.iconOpenMore{
+			position: relative;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 100%;			
+		}
+	} 
+ }
+	.sideHeader {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;	
+		margin-bottom: 4.5rem;
+		> .iconCloseSidebar{
+			border: #fff solid 0.12rem;
+			border-radius: 0.30rem;
+			width: 3rem;
+			height: 2rem;
+			transition: all 1s;
+			
+			&:hover{
+				cursor: pointer;
+				opacity: 0.8;
+				filter: drop-shadow(-1.87rem 0.06rem 0.06rem #B794F4);
+			}
+		}
+		& > span {
+			font-size: 3rem;
+			font-weight: 600;
+			color: var(--yellow);
 
-    p {
-      display: inline;
-      color: var(--white);
-    }
-  }
-
+			p {
+				display: inline;
+				color: var(--white);
+			}
+		}
+	}
   .buttons-container {
     display: flex;
     flex-direction: column;
 
     width: 100%;
   }
+  
 }
